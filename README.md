@@ -1,1 +1,1 @@
-# Constriant programming 
+# Constraint programming 
