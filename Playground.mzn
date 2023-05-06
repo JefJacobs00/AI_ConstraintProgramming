@@ -41,6 +41,7 @@ array [1..N] of var int: endtimes;
  %PRINT ID
  show(v) ++ ":" ++
  show(beginposition[v])++"-"++show(beginposition[v]+lengths[v]) ++ ";"++
- show(begintimes[v])++".."++show(endtimes[v])++";"
+ show(begintimes[v])++".."++show(endtimes[v])++";" ++
+ join(",", [show(c) | c in 1..C where fix(assignedcranes[v, c] = 1)]) ++ "\n"
  |v in 1..N
  ]
